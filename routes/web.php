@@ -16,7 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [GuestController::class, "index"])->name("guests.welcome");
+Route::get('/', function(){
+    return view("welcome");
+});
+
+Route::get("/guests/index", [GuestController::class, "index"])->name("guests.index");
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');

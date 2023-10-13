@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Simon Portfolio</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -19,7 +19,9 @@
         </style>
     </head>
     <body class="antialiased">
+      
         <video src="/bg-video/bg-vid.mp4" autoplay loop muted class="bg-vid"></video>
+
         <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen">
             @if (Route::has('login'))
                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
@@ -36,14 +38,16 @@
             @endif
 
             <div class="max-w-7xl mx-auto p-6 lg:p-8">
-                <div class="flex justify-center">
-                    <img src="/img/logo.png" alt="">
+                <div class="text-center">
+                    <img src="/img/logo.png">
                 </div>
 
-                <div class="text-center">
-                    <x-generic-button class="my-button">
-                        ENTER
-                    </x-generic-button>
+                <div class="text-center mt-8 button-cont max-h-9">
+                    <a href="{{route("guests.index")}}">
+                        <x-generic-button class="my-button">
+                            ENTER
+                        </x-generic-button>
+                    </a>
                 </div>
 
             </div>
