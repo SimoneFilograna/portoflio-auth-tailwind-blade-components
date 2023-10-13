@@ -15,7 +15,8 @@
         @vite(['resources/scss/app.scss', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+        <video src="/bg-video/bg-vid.mp4" autoplay loop muted class="bg-vid"></video>
+        <div class="min-h-screen relative">
             @include('layouts.navigation')
 
             <!-- Page Heading -->

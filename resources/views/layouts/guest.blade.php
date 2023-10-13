@@ -16,10 +16,19 @@
     </head>
     <body class="font-sans text-gray-900 antialiased">
         <video src="/bg-video/bg-vid.mp4" autoplay loop muted class="bg-vid"></video>
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 relative">
+        <div class="min-h-screen p-6 relative">
             
-            <div class="w-full ">
-                {{ $slot }}
+            <!-- Page Heading -->
+            @if (isset($header))
+                <header class="w-full mx-auto">
+                    <div class="">
+                        {{ $header }}
+                    </div>
+                </header>
+            @endif
+
+            <div class="w-full">
+                {{ $content}}
             </div>
         </div>
     </body>
