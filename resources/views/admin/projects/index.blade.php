@@ -38,8 +38,8 @@
 
             </div>
 
-            <div class="foot-button text-center pt-16 pb-20">
-                <a href="{{route("admin.projects.create")}}">
+            <div class="foot-button text-center mt-2 pt-16 pb-20">
+                <a href="{{route("admin.projects.create")}}" class="">
                     <x-generic-button class="my-button min-h-9">
                         NEW PROJECT
                     </x-generic-button>              
