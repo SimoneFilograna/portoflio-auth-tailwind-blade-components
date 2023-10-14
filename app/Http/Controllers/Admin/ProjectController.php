@@ -42,8 +42,9 @@ class ProjectController extends Controller
 
         $data["slug"] = $this->generateSlug($data["title"]);
 
-
-        $data["thumb"] = Storage::put("projects", $data["thumb"]);
+        if(isset($data["thumb"])){
+            $data["thumb"] = Storage::put("projects", $data["thumb"]);
+        }
 
         //creo l'istanza di Project, fill per assegnare i dati all'istanza
         //save per salvarli nel database
