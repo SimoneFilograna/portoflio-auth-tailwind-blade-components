@@ -26,9 +26,11 @@
                     </div>
                 </header>
             @endif
+            
 
+            {{-- Page Main --}}
             <div class="w-full">
-                {{ $content}}
+                {{ $slot }}
             </div>
         </div>
     </body>

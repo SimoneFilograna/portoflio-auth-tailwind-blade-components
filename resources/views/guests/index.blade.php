@@ -25,7 +25,6 @@
     </div>  
     @endslot
 
-    @slot('content')
         <div class="container mx-auto text-white mt-20">
 
             <div class="columns-2 flex justify-center gap-48 items-center">
@@ -41,7 +40,29 @@
                 </div>
             </div>
         </div>
-        
-    @endslot
+
+        <div class="container mx-auto text-white project-example text-center mt-32">
+            <h1 class="text-4xl mt-4 pb-3">EXPLORE MY PROJECTS</h1>
+            <div class="columns-3 mt-14 flex gap-36 justify-center">
+
+                @foreach ($projects as $project)
+                    
+                    <div class="project border border-pink-600 border-solid rounded-3xl px-11 py-8">
+                        <img src="/img/logo.png" alt="">
+                        <h5>{{$project->title}}</h5>
+                        <p>{{$project->type->type}}</p>
+
+                        <x-generic-button class="mt-3 my-button">
+                            <a href="{{route("admin.projects.show", $project->slug)}}">
+                                Details
+                            </a>
+                        </x-generic-button>
+                    </div>
+
+                @endforeach
+
+            </div>
+        </div>
+    
 
 </x-guest-layout>
