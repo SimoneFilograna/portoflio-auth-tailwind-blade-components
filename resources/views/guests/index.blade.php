@@ -52,11 +52,11 @@
                         <h5>{{$project->title}}</h5>
                         <p>{{$project->type->type}}</p>
 
-                        <x-generic-button class="mt-3 my-button">
-                            <a href="{{route("admin.projects.show", $project->slug)}}">
+                        <a href="{{route("admin.projects.show", $project->slug)}}">
+                            <x-generic-button class="mt-3 my-button">
                                 Details
-                            </a>
-                        </x-generic-button>
+                            </x-generic-button>
+                        </a>
                     </div>
 
                 @endforeach
