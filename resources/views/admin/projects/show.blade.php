@@ -4,7 +4,7 @@
             <h1 class="text-5xl text-center">{{$project->title}}</h1>
 
             <div class="container-img-show w-2/4 self-center my-16">
-                <img src="/img/login-img.png" class="w-100 object-cover" alt="">
+                <img src="{{asset("/storage/". $project->thumb)}}" class="w-100 object-cover" alt="">
             </div>
 
             @if($project->technologies)

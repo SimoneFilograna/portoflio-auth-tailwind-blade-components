@@ -23,7 +23,7 @@
                 @foreach ($projects as $project)
                     
                     <div class="project border border-pink-600 border-solid rounded-3xl px-11 py-8">
-                        <img src="/img/logo.png" alt="">
+                        <img src="{{asset("/storage/". $project->thumb)}}" alt="">
                         <h5 class="text-xl font-bold">{{$project->title}}</h5>
                         <p>{{$project->type->type}}</p>
 
