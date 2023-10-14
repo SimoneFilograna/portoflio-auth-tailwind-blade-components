@@ -43,13 +43,13 @@
 
         <div class="container mx-auto text-white project-example text-center mt-32">
             <h1 class="text-4xl mt-4 pb-3">EXPLORE MY PROJECTS</h1>
-            <div class="columns-3 mt-14 flex gap-36 justify-center">
+            <div class="grid grid-cols-3 gap-28 mt-14">
 
                 @foreach ($projects as $project)
                     
                     <div class="project border border-pink-600 border-solid rounded-3xl px-11 py-8">
                         <img src="/img/logo.png" alt="">
-                        <h5>{{$project->title}}</h5>
+                        <h5 class="text-xl">{{$project->title}}</h5>
                         <p>{{$project->type->type}}</p>
 
                         <a href="{{route("admin.projects.show", $project->slug)}}">
