@@ -35,5 +35,31 @@
     }
 }
 
+.img-container::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;   
+    width: 400px;
+    height:100px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background-color: rgb(255, 0, 119);
+    animation: circle 6s infinite linear;
+    box-shadow: 0px 0px 60px 40px rgb(255, 0, 119);
+}
+
+@keyframes circle{
+    0%{    
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+
+}
+
 
 
