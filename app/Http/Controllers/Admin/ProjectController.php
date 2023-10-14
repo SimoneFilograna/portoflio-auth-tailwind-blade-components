@@ -132,7 +132,10 @@ class ProjectController extends Controller
         }
 
         
-        $project->technologies()->sync($data["technologies"]);
+        // 
+        if(isset($data["technologies"])){
+            $project->technologies()->sync($data["technologies"]);
+        }
         
 
         $project->update($data);
