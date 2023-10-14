@@ -36,12 +36,12 @@
                     <h1 class="text-4xl mt-4 pb-3">Welcome to My portfolio</h1>
                     <p>Hello, I am Simone, a passionate web developer who has been immersed in the world of IT since the age of 15. Thanks to my curiosity, I have had the opportunity to delve into various programming languages, always striving to learn and preferring logic over memorization. There is no memory that can surpass a well-structured reasoning.</p>
                 </div>
-
                 <div class="righ-img">
                     <img src="/img/right-side.svg" alt="">
                 </div>
             </div>
         </div>
+        
     @endslot
 
 </x-guest-layout>
