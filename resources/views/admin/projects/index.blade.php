@@ -29,7 +29,7 @@
                             <p>{{$project->type->type}}</p>
     
                             <a href="{{route("admin.projects.show", $project->slug)}}">
-                                <x-generic-button class="mt-5 my-button">
+                                <x-generic-button class="mt-5 my-button max-h-9">
                                     Details
                                 </x-generic-button>
                             </a>
