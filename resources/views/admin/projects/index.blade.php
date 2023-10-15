@@ -22,16 +22,18 @@
 
                 @foreach ($projects as $project)
                     
-                    <div class="project border border-pink-600 border-solid rounded-3xl px-11 py-8">
-                        <img src="{{asset("/storage/". $project->thumb)}}" alt="">
-                        <h5 class="text-xl font-bold">{{$project->title}}</h5>
-                        <p>{{$project->type->type}}</p>
-
-                        <a href="{{route("admin.projects.show", $project->slug)}}">
-                            <x-generic-button class="mt-5 my-button">
-                                Details
-                            </x-generic-button>
-                        </a>
+                    <div class="project border border-pink-600 border-solid rounded-3xl">
+                        <img src="{{asset("/storage/". $project->thumb)}}" class="rounded-3xl" alt="">
+                        <div class="card-body py-2">
+                            <h5 class="text-xl font-bold">{{$project->title}}</h5>
+                            <p>{{$project->type->type}}</p>
+    
+                            <a href="{{route("admin.projects.show", $project->slug)}}">
+                                <x-generic-button class="mt-5 my-button">
+                                    Details
+                                </x-generic-button>
+                            </a>
+                        </div>
                     </div>
 
                 @endforeach
